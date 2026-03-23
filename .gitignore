@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+.env
+.idea/
+.vscode/
+*.swp
+*.swo
+output.mp4
+
+# Internal tools — do not ship to candidates
+generate_sample_data.py
+diagnose_video.py
