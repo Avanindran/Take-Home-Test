@@ -1,9 +1,10 @@
 """Tests for bug fixes in the face tracking module."""
 
+import unittest
 from src.tracker import track_face_crop
 
 
-class TestTrackerBugFixes:
+class TestTrackerBugFixes(unittest.TestCase):
     """Tests for specific bug fixes in track_face_crop."""
 
     def test_dead_zone_prevents_unnecessary_movement(self):

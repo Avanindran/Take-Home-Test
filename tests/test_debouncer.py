@@ -1,9 +1,10 @@
 """Tests for the speaker ID debouncing module."""
 
+import unittest
 from src.debouncer import debounce_speaker_ids
 
 
-class TestDebouncer:
+class TestDebouncer(unittest.TestCase):
     """Tests for speaker ID debouncing."""
 
     def test_empty_input(self):
