@@ -137,7 +137,7 @@ python run.py sample_data/clip_a.json --verbose
 
 ### Unit Testing
 ```bash
-# Run all tests (requires proper PYTHONPATH setup)
+# Run all tests 
 python -m unittest discover tests -v
 ```
 
