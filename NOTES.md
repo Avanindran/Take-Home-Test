@@ -1,4 +1,4 @@
-# Camera Tracking Stabilizer - Take Home Test Solution
+# Camera Tracking Stabiliser - Take Home Test Solution
 
 ## Overview
 
@@ -33,8 +33,8 @@ This solution implements a dead-zone camera tracking system for stable portrait 
 **Key Features**:
 - Preserves None segments (no speaker detected) unchanged
 - Merges short flicker segments with surrounding stable runs
-- Handles edge cases (short segments at beginning/end, no stable neighbors)
-- Configurable minimum hold frames (default 15 frames ≈ 0.5s at 30fps)
+- Handles edge cases (short segments at beginning/end, no stable neighbours)
+- Configurable minimum hold frames (default 15 frames ≈  0.5s at 30fps)
 
 **Example**:
 ```python
@@ -56,11 +56,11 @@ result = debounce_speaker_ids(input_ids, min_hold_frames=10)
 - Short flicker replacement
 - Long segment preservation
 - Multiple short flickers
-- Edge cases (beginning, end, no stable neighbors)
+- Edge cases (beginning, end, no stable neighbours)
 - Complex scenarios with None values
 - Dead zone functionality verification
 - Scene boundary and speaker switch detection
-- First face detection behavior
+- First face detection behaviour
 - Exponential smoothing verification
 
 ## Performance Improvements
@@ -87,7 +87,7 @@ result = debounce_speaker_ids(input_ids, min_hold_frames=10)
 ### Speaker Debouncing Algorithm
 - **Run-Length Encoding**: Efficiently identifies consecutive segments
 - **Stability Threshold**: Configurable minimum frames for "stable" speaker
-- **Neighbor Analysis**: Finds previous/next stable runs for replacement
+- **Neighbour Analysis**: Finds previous/next stable runs for replacement
 - **Merge Strategy**: Combines short segments with surrounding stable runs of same ID
 
 ### Scene and Speaker Switch Detection
@@ -158,14 +158,14 @@ python -m unittest discover tests -v
 ## Design Decisions
 
 ### Debouncer Implementation
-1. **Run-Length Encoding**: Chose this approach for efficiency with long sequences
-2. **Neighbor Priority**: Prefer previous stable run over next stable run for replacement
+1. **Run-Length Encoding**: Choose this approach for efficiency with long sequences
+2. **Neighbour Priority**: Prefer previous stable run over next stable run for replacement
 3. **None Preservation**: Never modify None segments as they represent valid "no speaker" states
 4. **Edge Case Handling**: Gracefully handle scenarios with no stable neighbors
 
 ### Bug Fix Approach
 1. **Minimal Changes**: Only fixed the specific broken logic, didn't rewrite entire functions
-2. **Backward Compatibility**: Maintained all existing API and behavior where correct
+2. **Backwards Compatibility**: Maintained all existing API and behaviour where correct
 3. **Test Coverage**: Created comprehensive tests to prevent regression
 
 ### Performance Considerations
